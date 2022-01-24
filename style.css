@@ -13,6 +13,7 @@
   font-weight: 300;
   text-transform: uppercase;
   font-size: 2.5rem;
+  text-align: center;
 }
 
 .paragraph {
@@ -45,8 +46,8 @@ body {
 }
 
 .hero {
-  padding-top: 80px;
-  height: 450px;
+  padding: 80px 0 20px 0;
+  height: auto;
 }
 
 .hero-elements {
@@ -71,7 +72,7 @@ body {
 .art {
   flex: 0 0 25%;
   border: solid 2px red;
-  height: 100%;
+  height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,9 +80,9 @@ body {
 }
 
 .results-section {
-  padding-top: 60px;
+  padding: 60px 0;
   border: solid 2px black;
-  height: 700px;
+  height: auto;
   margin-top: 80px;
 }
 
@@ -106,6 +107,7 @@ body {
 .card {
   border: solid 2px green;
   flex: 0 0 40%;
+  height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -115,19 +117,29 @@ body {
 .callToAction-wrapper {
   margin-top: 1em;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-}
-
-.about {
-  padding-top: 30px;
-  border: solid 2px black;
-  height: 550px;
+  align-items: center;
 }
 
 .about-wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1em;
+}
+
+.about {
+  padding-top: 30px;
+  border: solid 2px black;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.about-resume {
+  width: 60%;
+  text-align: center;
 }
 
 footer {
@@ -135,4 +147,51 @@ footer {
   display: flex;
   justify-content: space-evenly;
   height: 250px;
+}
+
+/*KINDLE E MONITORES COM RESOLUÇÃO BAIXA */
+
+@media only screen and (max-width: 1000px) {
+  .hero-text {
+    width: 70%;
+    padding: 0 2em;
+  }
+  .result-box {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+/*TABLET - IPAD  */
+
+@media only screen and (max-width: 700px) {
+  .hero-text {
+    width: 95%;
+    padding: 0 2em;
+    order: 2;
+  }
+  .hero-elements {
+    flex-direction: column;
+  }
+}
+
+/*SMARTPHONE*/
+
+@media only screen and (max-width: 480px) {
+  .hero-text {
+    padding: 0 1em;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .card {
+    flex: 0 0 95%;
+  }
+
+  .about-resume {
+    width: 100%;
+    padding: 0 0.8em;
+  }
 }
