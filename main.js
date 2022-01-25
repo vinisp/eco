@@ -47,14 +47,14 @@ function scanDocument() {
 
 document.addEventListener("scroll", scanDocument);
 
-var w = (c.width = 450),
-  h = (c.height = 500),
+var w = (c.width = 300),
+  h = (c.height = 450),
   ctx = c.getContext("2d"),
   opts = {
     speed: 1,
     splitSizeProbabilityMultiplier: 1 / 1000,
     maxIterations: 8,
-    startSize: 20,
+    startSize: 12,
     baseSizeMultiplier: 0.7,
     addedSizeMultiplier: 0.2,
     baseAngleVariation: -Math.PI / 16,

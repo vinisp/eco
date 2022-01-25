@@ -234,7 +234,3 @@ footer {
     transform: translateY(0);
   }
 }
-
-canvas {
-  background: transparent;
-}
