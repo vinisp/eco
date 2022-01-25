@@ -129,7 +129,7 @@ body {
 }
 
 .art {
-  flex: 0 0 25%;
+  flex: 0 0 30%;
   height: 450px;
   display: flex;
   justify-content: center;
