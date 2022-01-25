@@ -8,6 +8,10 @@
   font-size: 16px;
 }
 
+:root {
+  --hover-color: red;
+}
+
 .title {
   font-family: "Outfit", sans-serif;
   font-weight: 300;
@@ -31,18 +35,28 @@ body {
 }
 
 .navBar {
-  border: solid 2px black;
   display: flex;
   justify-content: space-around;
   align-items: center;
   position: fixed;
   height: 80px;
   width: 100%;
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+  transition: all 350ms ease;
 }
 
 .navItems {
   display: flex;
   gap: 2em;
+}
+
+.navItems li {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.navItems li:hover {
+  color: var(--hover-color);
 }
 
 .hero {
