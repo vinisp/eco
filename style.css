@@ -34,7 +34,12 @@ body {
   overflow-x: hidden;
 }
 
+.hidden {
+  opacity: 0;
+}
+
 .navBar {
+  z-index: 99999;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -93,6 +98,7 @@ body {
   padding: 60px 0;
   height: auto;
   margin-top: 80px;
+  transition: opacity 2s ease;
 }
 
 .result-box {
@@ -114,12 +120,14 @@ body {
 
 .card {
   border: solid 2px green;
+  opacity: 0;
   flex: 0 0 40%;
   height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: cardEnter 1500ms ease both;
 }
 
 .callToAction-wrapper {
@@ -201,5 +209,14 @@ footer {
   .about-resume {
     width: 100%;
     padding: 0 0.8em;
+  }
+}
+
+@keyframes cardEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
