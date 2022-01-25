@@ -20,9 +20,21 @@
   text-align: center;
 }
 
+.HighLighted {
+  margin: 0;
+  font-size: 2.5rem;
+  border-bottom: solid 5px rgba(105, 142, 45, 0.4);
+  box-sizing: border-box;
+}
+
+.HighLighted:after {
+  content: "";
+}
+
 .paragraph {
   font-family: "Baloo 2", cursive;
   font-size: 1.4rem;
+  text-align: center;
 }
 
 li {
@@ -48,6 +60,11 @@ body {
   width: 100%;
   box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
   transition: all 350ms ease;
+}
+
+.logo {
+  height: 70px;
+  transition: all 350ms ease both;
 }
 
 .navItems {
@@ -85,6 +102,11 @@ body {
   width: 50%;
 }
 
+.hero-text .title {
+  color: #698e2d;
+  font-size: 3rem;
+}
+
 .art {
   flex: 0 0 25%;
   height: 450px;
@@ -98,6 +120,9 @@ body {
   padding: 60px 0;
   height: auto;
   margin-top: 80px;
+  background: #1f503e;
+  background-image: url("./assets/sectionBg.png");
+  background-blend-mode: exclusion;
   transition: opacity 6s ease;
 }
 
@@ -107,6 +132,11 @@ body {
   align-items: center;
   gap: 2em;
   height: 90%;
+}
+
+.result-box .title {
+  color: white;
+  font-weight: 400;
 }
 
 .cards-wrapper {
@@ -119,7 +149,10 @@ body {
 }
 
 .card {
-  border: solid 2px green;
+  background: white;
+
+  border-radius: 14px;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2);
   opacity: 0;
   flex: 0 0 40%;
   height: 450px;
@@ -127,6 +160,32 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.card::after {
+  content: "";
+  background-image: url("./assets/bgArt.png");
+  background-size: cover;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.card-text {
+  font-weight: 100;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.card-number {
+  color: #1f503e;
+  font-family: "baloo 2", sans-serif;
+  font-weight: 500;
+  font-size: 3em;
 }
 
 .show {

@@ -1,6 +1,7 @@
 const $navBarItems = document.querySelectorAll(".menuItem");
 const $navBar = document.querySelector(".navBar");
 const $cards = document.querySelectorAll(".card");
+const $logo = document.querySelector(".logo");
 
 window.onscroll = function () {
   scrollFunction();
@@ -14,12 +15,14 @@ function scrollFunction() {
     opacity = true;
     console.log();
     $navBar.style.height = "40px";
+    $logo.style.height = "30px";
     $navBar.style.opacity = "0.4";
   } else {
     for (let i = 0; i < $navBarItems.length; i++) {
       $navBarItems[i].style.opacity = "1";
     }
     $navBar.style.height = "80px";
+    $logo.style.height = "70px";
     $navBar.style.opacity = "1";
   }
 }
