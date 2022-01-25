@@ -7,6 +7,10 @@ window.onscroll = function () {
   scrollFunction();
 };
 
+window.onload = function () {
+  document.body.classList.add("fade");
+};
+
 function scrollFunction() {
   if (document.documentElement.scrollTop > 80) {
     for (let i = 0; i < $navBarItems.length; i++) {
