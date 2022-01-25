@@ -98,7 +98,7 @@ body {
   padding: 60px 0;
   height: auto;
   margin-top: 80px;
-  transition: opacity 2s ease;
+  transition: opacity 6s ease;
 }
 
 .result-box {
@@ -127,7 +127,18 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: cardEnter 1500ms ease both;
+}
+
+.show {
+  animation: cardEnter 2500ms ease both;
+}
+
+.show:nth-child(3) {
+  animation: cardEnter 3500ms ease both;
+}
+
+.show:nth-child(4) {
+  animation: cardEnter 3500ms ease both;
 }
 
 .callToAction-wrapper {
@@ -143,6 +154,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1em;
+  transition: opacity 2s ease;
 }
 
 .about {
@@ -215,8 +227,14 @@ footer {
 @keyframes cardEnter {
   0% {
     opacity: 0;
+    transform: translateY(-100px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
+}
+
+canvas {
+  background: transparent;
 }
