@@ -47,8 +47,8 @@ function scanDocument() {
 
 document.addEventListener("scroll", scanDocument);
 
-var w = (c.width = 400),
-  h = (c.height = 450),
+var w = (c.width = 450),
+  h = (c.height = 500),
   ctx = c.getContext("2d"),
   opts = {
     speed: 1,
