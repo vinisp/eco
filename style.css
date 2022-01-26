@@ -95,7 +95,9 @@ body {
 
 .navItems li {
   text-transform: uppercase;
+  color: #1f503e;
   cursor: pointer;
+  font-family: "Outfit", sans-serif;
 }
 
 .navItems li:hover {
@@ -211,9 +213,10 @@ body {
 }
 
 .card-text {
-  font-weight: 100;
-  font-size: 1.4rem;
+  font-weight: 800;
+  font-size: 2rem;
   text-align: center;
+  color: #1f503e;
 }
 
 .card-number {
@@ -243,9 +246,6 @@ body {
   align-items: center;
   padding: 120px 0;
   background: #2db5daaf;
-}
-
-.callToAction-wrapper ::after {
 }
 
 .callToAction-text {
