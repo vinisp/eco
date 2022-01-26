@@ -174,7 +174,7 @@ body {
   background-image: url("./assets/sectionBg.png");
   background-blend-mode: exclusion;
   transition: opacity 6s ease;
-  height: auto;
+  height: 1150px;
 }
 
 .result-box {
@@ -215,11 +215,10 @@ body {
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
-  transition: 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .card:hover {
-  /* background: rgba(31, 80, 62, 0.4); */
   background: rgba(105, 142, 45, 0.4);
   box-shadow: 10px 10px 20px -10px rgba(105, 142, 45, 0.2);
   border-right: 1px solid rgba(105, 142, 45, 0.2);
@@ -264,9 +263,11 @@ body {
   justify-content: center;
   align-items: flex-start;
   height: 360px;
-  transform: translateX(-150px);
   transition: all 6s ease;
-  animation: leftEnter 5s ease both;
+}
+
+.leftEnter {
+  animation: leftEnter 3500ms ease both;
 }
 
 .callToAction-text {
@@ -277,7 +278,7 @@ body {
   text-align: center;
   background: #2db5da3f;
 
-  width: 60%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -324,16 +325,9 @@ body {
   width: 50%;
   padding: 120px 60px;
   transition: opacity 4s ease;
-}
-
-.about-block:nth-child(even) {
-  align-self: flex-end;
+  align-self: center;
+  text-align: justify;
   background: #698e2d42;
-}
-
-.about-block:nth-child(odd) {
-  align-self: flex-start;
-  background: #698e2d49;
 }
 
 footer {
@@ -404,6 +398,7 @@ footer {
 
 @keyframes leftEnter {
   0% {
+    transform: translateX(-3500px);
     width: 0;
   }
   100% {

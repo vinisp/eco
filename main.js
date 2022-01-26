@@ -2,6 +2,8 @@ const $navBarItems = document.querySelectorAll(".menuItem");
 const $navBar = document.querySelector(".navBar");
 const $cards = document.querySelectorAll(".card");
 const $logo = document.querySelector(".logo");
+const $callToActionWrapper = document.querySelectorAll(".callToAction-wrapper");
+const $aboutBlock = document.querySelectorAll(".about-block");
 
 window.onscroll = function () {
   scrollFunction();
@@ -51,6 +53,16 @@ function scanDocument() {
   });
   $cards.forEach(function (section) {
     section.classList.add("show");
+  });
+  $callToActionWrapper.forEach((section) => {
+    if (isVisible(section)) {
+      section.classList.add("leftEnter");
+    }
+  });
+  $aboutBlock.forEach((section) => {
+    if (isVisible(section)) {
+      section.classList.add("show");
+    }
   });
 }
 
