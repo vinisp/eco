@@ -6,8 +6,11 @@ const $callToActionWrapper = document.querySelectorAll(".callToAction-wrapper");
 const $aboutBlock = document.querySelectorAll(".about-block");
 const counters = document.querySelectorAll(".card-number");
 const $hectar = document.querySelectorAll(".hectar");
+const $prospect = document.querySelectorAll(".prospect");
+const $municipality = document.querySelectorAll(".municipality");
+const $co2Number = document.querySelectorAll(".Co2Number");
 const speed = 600;
-const speedThan100 = 20;
+const speedThan100 = 1;
 
 counters.forEach((counter) => {
   const updateCount = () => {
@@ -84,6 +87,17 @@ function isVisible2(element) {
   }
 }
 
+function isVisible3(element) {
+  let elementBox = element.getBoundingClientRect();
+  let distanceTop = -300;
+
+  if (elementBox.top - window.innerHeight < distanceTop) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 function scanDocument() {
   let sectionList = document.querySelectorAll(".hidden");
   sectionList.forEach(function (section) {
@@ -112,7 +126,7 @@ function scanDocument() {
         const updateCount = () => {
           const target = +counter.getAttribute("data-target");
           const count = +counter.innerText;
-          console.log(counter);
+
           // Lower inc to slow and higher to slow
           const inc = Math.floor(target / speed);
 
@@ -125,6 +139,96 @@ function scanDocument() {
             counter.innerText = count + inc;
             // Call function every ms
             setTimeout(updateCount, 1);
+          } else {
+            counter.innerText = target;
+          }
+        };
+
+        updateCount();
+      });
+    }
+  });
+
+  $prospect.forEach((section) => {
+    if (isVisible2(section)) {
+      section.setAttribute("data-target", "849");
+      $prospect.forEach((counter) => {
+        const updateCount = () => {
+          const target = +counter.getAttribute("data-target");
+          const count = +counter.innerText;
+
+          // Lower inc to slow and higher to slow
+          const inc = Math.floor(target / speed);
+
+          // console.log(inc);
+          // console.log(count);
+
+          // Check if target is reached
+          if (count < target) {
+            // Add inc to count and output in counter
+            counter.innerText = count + inc;
+            // Call function every ms
+            setTimeout(updateCount, 1);
+          } else {
+            counter.innerText = target;
+          }
+        };
+
+        updateCount();
+      });
+    }
+  });
+
+  $municipality.forEach((section) => {
+    if (isVisible3(section)) {
+      section.setAttribute("data-target", "29");
+      $municipality.forEach((counter) => {
+        const updateCount = () => {
+          const target = +counter.getAttribute("data-target");
+          const count = +counter.innerText;
+          console.log(counter);
+          // Lower inc to slow and higher to slow
+          const inc = 1;
+
+          console.log(inc);
+          // console.log(count);
+
+          // Check if target is reached
+          if (count < target) {
+            // Add inc to count and output in counter
+            counter.innerText = count + inc;
+            // Call function every ms
+            setTimeout(updateCount, 200);
+          } else {
+            counter.innerText = target;
+          }
+        };
+
+        updateCount();
+      });
+    }
+  });
+
+  $co2Number.forEach((section) => {
+    if (isVisible3(section)) {
+      section.setAttribute("data-target", "21");
+      $co2Number.forEach((counter) => {
+        const updateCount = () => {
+          const target = +counter.getAttribute("data-target");
+          const count = +counter.innerText;
+          console.log(counter);
+          // Lower inc to slow and higher to slow
+          const inc = 1;
+
+          console.log(inc);
+          // console.log(count);
+
+          // Check if target is reached
+          if (count < target) {
+            // Add inc to count and output in counter
+            counter.innerText = count + inc;
+            // Call function every ms
+            setTimeout(updateCount, 200);
           } else {
             counter.innerText = target;
           }
