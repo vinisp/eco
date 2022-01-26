@@ -261,18 +261,6 @@ lines.push(
 
 anim();
 
-window.addEventListener("click", function () {
-  lines.length = 0;
-
-  lines.push(
-    new Line({
-      end: new Point(0, 0, 0),
-      angle: { a: Math.PI / 2, b: -Math.PI / 2 },
-      size: opts.startSize,
-      iteration: 0,
-    })
-  );
-});
 window.addEventListener("resize", function () {
   w = c.width = window.innerWidth;
   h = c.height = window.innerHeight;
