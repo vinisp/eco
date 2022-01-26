@@ -5,7 +5,8 @@ const $logo = document.querySelector(".logo");
 const $callToActionWrapper = document.querySelectorAll(".callToAction-wrapper");
 const $aboutBlock = document.querySelectorAll(".about-block");
 const counters = document.querySelectorAll(".card-number");
-const speed = 20;
+const $hectar = document.querySelectorAll(".hectar");
+const speed = 600;
 const speedThan100 = 20;
 
 counters.forEach((counter) => {
@@ -72,6 +73,17 @@ function isVisible(element) {
   }
 }
 
+function isVisible2(element) {
+  let elementBox = element.getBoundingClientRect();
+  let distanceTop = -550;
+
+  if (elementBox.top - window.innerHeight < distanceTop) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 function scanDocument() {
   let sectionList = document.querySelectorAll(".hidden");
   sectionList.forEach(function (section) {
@@ -90,6 +102,36 @@ function scanDocument() {
   $aboutBlock.forEach((section) => {
     if (isVisible(section)) {
       section.classList.add("showAbout");
+    }
+  });
+
+  $hectar.forEach((section) => {
+    if (isVisible2(section)) {
+      section.setAttribute("data-target", "498595");
+      $hectar.forEach((counter) => {
+        const updateCount = () => {
+          const target = +counter.getAttribute("data-target");
+          const count = +counter.innerText;
+          console.log(counter);
+          // Lower inc to slow and higher to slow
+          const inc = Math.floor(target / speed);
+
+          // console.log(inc);
+          // console.log(count);
+
+          // Check if target is reached
+          if (count < target) {
+            // Add inc to count and output in counter
+            counter.innerText = count + inc;
+            // Call function every ms
+            setTimeout(updateCount, 1);
+          } else {
+            counter.innerText = target;
+          }
+        };
+
+        updateCount();
+      });
     }
   });
 }
