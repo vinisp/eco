@@ -169,12 +169,12 @@ body {
 
 .results-section {
   padding: 120px 0;
-  height: auto;
   margin-top: 80px;
   background: #1f503e;
   background-image: url("./assets/sectionBg.png");
   background-blend-mode: exclusion;
   transition: opacity 6s ease;
+  height: auto;
 }
 
 .result-box {
@@ -218,14 +218,18 @@ body {
   transition: 0.5s ease;
 }
 
-@supports (
-  (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))
-) {
-  .card {
-    background-color: rgba(255, 255, 255, 0.4);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-  }
+.card:hover {
+  /* background: rgba(31, 80, 62, 0.4); */
+  background: rgba(105, 142, 45, 0.4);
+  box-shadow: 10px 10px 20px -10px rgba(105, 142, 45, 0.2);
+  border-right: 1px solid rgba(105, 142, 45, 0.2);
+  border-bottom: 1px solid rgba(105, 142, 45, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.card:hover .card-text,
+.card:hover .card-number {
+  color: white;
 }
 
 .card-text {
@@ -260,7 +264,9 @@ body {
   justify-content: center;
   align-items: flex-start;
   height: 360px;
-  transition: opacity 6s ease;
+  transform: translateX(-150px);
+  transition: all 6s ease;
+  animation: leftEnter 5s ease both;
 }
 
 .callToAction-text {
@@ -387,10 +393,20 @@ footer {
 @keyframes cardEnter {
   0% {
     opacity: 0;
-    transform: translateY(-100px);
+    transform: translateY(-150px);
+    height: 0px;
   }
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes leftEnter {
+  0% {
+    width: 0;
+  }
+  100% {
+    transform: translateX(0px);
   }
 }
