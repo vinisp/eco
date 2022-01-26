@@ -4,6 +4,34 @@ const $cards = document.querySelectorAll(".card");
 const $logo = document.querySelector(".logo");
 const $callToActionWrapper = document.querySelectorAll(".callToAction-wrapper");
 const $aboutBlock = document.querySelectorAll(".about-block");
+const counters = document.querySelectorAll(".card-number");
+const speed = 20;
+const speedThan100 = 20;
+
+counters.forEach((counter) => {
+  const updateCount = () => {
+    const target = +counter.getAttribute("data-target");
+    const count = +counter.innerText;
+
+    // Lower inc to slow and higher to slow
+    const inc = Math.floor(target / speed);
+
+    // console.log(inc);
+    // console.log(count);
+
+    // Check if target is reached
+    if (count < target) {
+      // Add inc to count and output in counter
+      counter.innerText = count + inc;
+      // Call function every ms
+      setTimeout(updateCount, 1);
+    } else {
+      counter.innerText = target;
+    }
+  };
+
+  updateCount();
+});
 
 window.onscroll = function () {
   scrollFunction();
@@ -68,6 +96,7 @@ function scanDocument() {
 
 document.addEventListener("scroll", scanDocument);
 
+/*
 let w = (c.width = 350),
   h = (c.height = 450),
   ctx = c.getContext("2d"),
@@ -280,3 +309,4 @@ window.addEventListener("resize", function () {
   opts.vanishPoint.x = w / 2;
   opts.vanishPoint.y = h / 2;
 });
+*/
