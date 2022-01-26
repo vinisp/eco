@@ -228,7 +228,7 @@ function scanDocument() {
             // Add inc to count and output in counter
             counter.innerText = count + inc;
             // Call function every ms
-            setTimeout(updateCount, 200);
+            setTimeout(updateCount, 250);
           } else {
             counter.innerText = target;
           }
