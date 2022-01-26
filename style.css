@@ -48,10 +48,6 @@ body {
   box-sizing: border-box;
 }
 
-.HighLighted:after {
-  content: "";
-}
-
 .paragraph {
   font-family: "Baloo 2", cursive;
   font-size: 1.4rem;
@@ -98,6 +94,7 @@ body {
   color: #1f503e;
   cursor: pointer;
   font-family: "Outfit", sans-serif;
+  transition: all 350ms ease;
 }
 
 .navItems li:hover {
@@ -156,13 +153,13 @@ body {
   flex: 0 0 40%;
   height: 450px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-size: 3em;
 }
 
 .results-section {
-  padding: 120px 0 0;
+  padding: 120px 0;
   height: auto;
   margin-top: 80px;
   background: #1f503e;
@@ -239,21 +236,36 @@ body {
 }
 
 .callToAction-wrapper {
-  margin-top: 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 120px 0;
-  background: #2db5daaf;
+  align-items: flex-start;
+  height: 360px;
+  transition: opacity 6s ease;
 }
 
 .callToAction-text {
   border: 0;
-  font-family: "Baloo 2", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-weight: 500;
-  color: #1f503e;
   font-size: 4rem;
+  text-align: center;
+  background: #2db5da3f;
+
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.callToAction-text .title {
+  color: #2db5da;
+  font-weight: 600;
+}
+
+.callToAction-text .paragraph {
   text-align: center;
 }
 
@@ -262,15 +274,14 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1em;
-  transition: opacity 2s ease;
 }
 
 .about {
   padding-top: 30px;
-  border: solid 2px black;
   height: auto;
   display: flex;
   justify-content: center;
+  transition: opacity 6s ease;
 }
 
 .about-resume {

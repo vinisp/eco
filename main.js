@@ -20,7 +20,7 @@ function scrollFunction() {
     console.log();
     $navBar.style.height = "40px";
     $logo.style.height = "30px";
-    $navBar.style.opacity = "0.4";
+    $navBar.style.opacity = "0.8";
   } else {
     for (let i = 0; i < $navBarItems.length; i++) {
       $navBarItems[i].style.opacity = "1";
@@ -45,7 +45,9 @@ function isVisible(element) {
 function scanDocument() {
   let sectionList = document.querySelectorAll(".hidden");
   sectionList.forEach(function (section) {
-    section.classList.remove("hidden");
+    if (isVisible(section)) {
+      section.classList.remove("hidden");
+    }
   });
   $cards.forEach(function (section) {
     section.classList.add("show");
@@ -54,7 +56,7 @@ function scanDocument() {
 
 document.addEventListener("scroll", scanDocument);
 
-var w = (c.width = 300),
+let w = (c.width = 350),
   h = (c.height = 450),
   ctx = c.getContext("2d"),
   opts = {
