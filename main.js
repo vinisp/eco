@@ -61,7 +61,7 @@ function scanDocument() {
   });
   $aboutBlock.forEach((section) => {
     if (isVisible(section)) {
-      section.classList.add("show");
+      section.classList.add("showAbout");
     }
   });
 }
