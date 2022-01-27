@@ -58,6 +58,19 @@ body {
   text-align: center;
 }
 
+.linkHi {
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #1f503e;
+  border-bottom: solid 2px white;
+  transition: all 350ms ease both;
+}
+
+.linkHi:hover {
+  color: white;
+  border-bottom: solid 2px #1f503e;
+}
+
 li {
   list-style: none;
 }
@@ -330,6 +343,30 @@ body {
   box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
+.btn-submit {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 80px;
+  border: solid 2px #2db5da;
+  background: #2db5dac2;
+  color: white;
+  border-radius: 14px;
+  box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.2);
+  transition: all 350ms ease;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  border: solid 2px #2db5dac2;
+  background: white;
+  color: #2db5da;
+}
+
 .about-wrapper {
   display: flex;
   flex-direction: column;
@@ -368,11 +405,101 @@ body {
 }
 
 footer {
-  padding-top: 25px;
+  padding: 45px 0;
   display: flex;
-  justify-content: space-evenly;
-  height: 250px;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  height: auto;
   transition: all 350ms ease;
+}
+.content-wrapper-footer {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.content-wrapper-footer .title {
+  font-weight: 600;
+}
+
+.logos-footer {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+  flex: 0 0 100%;
+}
+
+.contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 65px;
+}
+
+.contact-style {
+  background: #2db5da73;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 25px;
+  border-radius: 14px;
+  box-shadow: 0 7px 7px 2px rgba(0, 0, 0, 0.2);
+  height: 600px;
+}
+
+#usrform {
+  display: flex;
+  flex-direction: column;
+  height: 220px;
+}
+
+#usrform label {
+  margin: 0.2em;
+}
+
+.main-form-title {
+  color: #196980;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.main-form-subTitles {
+  font-weight: 500;
+  color: #196980;
+  font-size: 1.2rem;
+}
+
+.main-form-subTitles {
+  margin-top: 1em !important;
+}
+
+.comment-title {
+  margin-bottom: 0.2em;
+}
+
+#usrform input {
+  padding: 15px;
+  width: 350px;
+  border: 0;
+  background: #f2f2f2ce;
+  box-shadow: 0 7px 7px 2px rgba(0, 0, 0, 0.2);
+}
+
+textarea {
+  padding: 15px;
+  width: 350px;
+  height: 200px;
+  margin-bottom: 1em;
+  border: 0;
+  background: #f2f2f2ce;
+  box-shadow: 0 7px 7px 2px rgba(0, 0, 0, 0.2);
 }
 
 /*KINDLE E MONITORES COM RESOLUÇÃO BAIXA */

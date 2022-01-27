@@ -10,32 +10,6 @@ const $prospect = document.querySelectorAll(".prospect");
 const $municipality = document.querySelectorAll(".municipality");
 const $co2Number = document.querySelectorAll(".Co2Number");
 const speed = 600;
-const speedThan100 = 1;
-
-counters.forEach((counter) => {
-  const updateCount = () => {
-    const target = +counter.getAttribute("data-target");
-    const count = +counter.innerText;
-
-    // Lower inc to slow and higher to slow
-    const inc = Math.floor(target / speed);
-
-    // console.log(inc);
-    // console.log(count);
-
-    // Check if target is reached
-    if (count < target) {
-      // Add inc to count and output in counter
-      counter.innerText = count + inc;
-      // Call function every ms
-      setTimeout(updateCount, 1);
-    } else {
-      counter.innerText = target;
-    }
-  };
-
-  updateCount();
-});
 
 window.onscroll = function () {
   scrollFunction();
@@ -47,11 +21,6 @@ window.onload = function () {
 
 function scrollFunction() {
   if (document.documentElement.scrollTop > 80) {
-    for (let i = 0; i < $navBarItems.length; i++) {
-      /* $navBarItems[i].style.opacity = "0.2"; */
-    }
-    opacity = true;
-    console.log();
     $navBar.style.height = "40px";
     $logo.style.height = "30px";
     $navBar.style.opacity = "0.8";
@@ -67,7 +36,7 @@ function scrollFunction() {
 
 function isVisible(element) {
   let elementBox = element.getBoundingClientRect();
-  let distanceTop = -250;
+  let distanceTop = -200;
 
   if (elementBox.top - window.innerHeight < distanceTop) {
     return true;
@@ -78,7 +47,7 @@ function isVisible(element) {
 
 function isVisible2(element) {
   let elementBox = element.getBoundingClientRect();
-  let distanceTop = -550;
+  let distanceTop = -500;
 
   if (elementBox.top - window.innerHeight < distanceTop) {
     return true;
@@ -89,7 +58,7 @@ function isVisible2(element) {
 
 function isVisible3(element) {
   let elementBox = element.getBoundingClientRect();
-  let distanceTop = -300;
+  const distanceTop = -200;
 
   if (elementBox.top - window.innerHeight < distanceTop) {
     return true;
@@ -186,11 +155,10 @@ function scanDocument() {
         const updateCount = () => {
           const target = +counter.getAttribute("data-target");
           const count = +counter.innerText;
-          console.log(counter);
+
           // Lower inc to slow and higher to slow
           const inc = 1;
 
-          console.log(inc);
           // console.log(count);
 
           // Check if target is reached
@@ -212,17 +180,13 @@ function scanDocument() {
   $co2Number.forEach((section) => {
     if (isVisible3(section)) {
       section.setAttribute("data-target", "21");
+
       $co2Number.forEach((counter) => {
         const updateCount = () => {
           const target = +counter.getAttribute("data-target");
           const count = +counter.innerText;
-          console.log(counter);
           // Lower inc to slow and higher to slow
           const inc = 1;
-
-          console.log(inc);
-          // console.log(count);
-
           // Check if target is reached
           if (count < target) {
             // Add inc to count and output in counter
