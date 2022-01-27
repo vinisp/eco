@@ -47,7 +47,7 @@ function isVisible(element) {
 
 function isVisible2(element) {
   let elementBox = element.getBoundingClientRect();
-  let distanceTop = -620;
+  let distanceTop = -350;
 
   if (elementBox.top - window.innerHeight < distanceTop) {
     return true;

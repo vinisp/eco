@@ -504,24 +504,45 @@ textarea {
 
 @media only screen and (max-width: 1000px) {
   .hero-text {
-    width: 70%;
+    width: 100%;
     padding: 0 2em;
   }
+
+  .results-section {
+    height: auto;
+  }
+
   .result-box {
     flex-direction: column;
     justify-content: flex-start;
+  }
+
+  .about-block {
+    width: 90%;
   }
 }
 
 /*TABLET - IPAD  */
 
 @media only screen and (max-width: 700px) {
+  .hero {
+    padding: 60px 0;
+  }
+
   .hero-text {
     width: 95%;
-    padding: 0 2em;
     order: 2;
   }
+
+  .hero-text .paragraph {
+    width: 100%;
+  }
+
+  .HighLighted {
+    font-size: 2rem;
+  }
   .hero-elements {
+    width: 100%;
     flex-direction: column;
   }
 }
@@ -545,12 +566,32 @@ textarea {
     width: 100%;
     padding: 0 0.8em;
   }
+
+  .card-number {
+    order: 2;
+  }
+
+  .about-block {
+    width: 95%;
+  }
+
+  .about-block {
+    padding: 15px;
+  }
+
+  .about-block {
+    text-align: center;
+  }
+
+  .contact-style {
+    width: 95%;
+  }
 }
 
 @keyframes cardEnter {
   0% {
     opacity: 0;
-    transform: translateY(-150px);
+    transform: translateY(150px);
     height: 0px;
   }
   100% {
