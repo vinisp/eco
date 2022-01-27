@@ -23,7 +23,7 @@ function scrollFunction() {
   if (document.documentElement.scrollTop > 80) {
     $navBar.style.height = "40px";
     $logo.style.height = "30px";
-    $navBar.style.opacity = "0.8";
+    $navBar.style.opacity = "1";
   } else {
     for (let i = 0; i < $navBarItems.length; i++) {
       $navBarItems[i].style.opacity = "1";
@@ -47,7 +47,7 @@ function isVisible(element) {
 
 function isVisible2(element) {
   let elementBox = element.getBoundingClientRect();
-  let distanceTop = -500;
+  let distanceTop = -620;
 
   if (elementBox.top - window.innerHeight < distanceTop) {
     return true;
