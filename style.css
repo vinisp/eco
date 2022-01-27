@@ -99,6 +99,7 @@ body {
   width: 100%;
   box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
   transition: all 350ms ease;
+  background: #f2f2f2b6;
 }
 
 .logo {
@@ -125,20 +126,8 @@ body {
 
 .hero {
   padding: 80px;
-  height: 750px;
-}
-
-.hero::after {
-  content: "";
-  width: 50%;
-  height: 79%;
-  opacity: 0.4;
+  height: auto;
   background: #698e2d42;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 .hero-elements {
@@ -162,11 +151,11 @@ body {
 .hero-text .title {
   color: #698e2d;
   font-size: 3rem;
-  text-align: left;
+  text-align: center;
 }
 
 .hero-text .paragraph {
-  text-align: left;
+  text-align: center;
   width: 50%;
 }
 
@@ -405,6 +394,8 @@ body {
 }
 
 footer {
+  border-top: solid 2px silver;
+  border-bottom: solid 2px silver;
   margin-top: 65px;
   padding: 45px 0;
   display: flex;
@@ -428,6 +419,7 @@ footer {
   font-weight: 600;
   color: rgb(114, 113, 113);
   border-bottom: solid 4px silver;
+  font-size: 1.4rem;
 }
 
 .logos-footer {
@@ -448,6 +440,7 @@ footer {
 }
 
 .contact-style {
+  margin-top: 65px;
   background: #2db5da73;
   display: flex;
   flex-direction: column;
