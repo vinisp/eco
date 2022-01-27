@@ -405,6 +405,7 @@ body {
 }
 
 footer {
+  margin-top: 65px;
   padding: 45px 0;
   display: flex;
   flex-direction: column;
