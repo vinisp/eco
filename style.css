@@ -142,13 +142,14 @@ body {
 .hero::before {
   content: "";
   position: absolute;
-  top: 0;
+  z-index: 2;
+  top: 251px;
   right: 0;
   width: 100%;
-  height: 56.5%;
+  height: 150%;
   background-image: url("./assets/hero.png");
   background-repeat: no-repeat;
-  opacity: 0.5;
+  opacity: 0.3;
   transform: scaleX(-1);
 }
 
