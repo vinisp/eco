@@ -426,7 +426,6 @@ body {
 }
 
 .about-bg:nth-child(2) {
-  height: 810px;
   left: 75%;
 }
 
@@ -572,6 +571,13 @@ textarea {
   .result-box {
     flex-direction: column;
     justify-content: flex-start;
+  }
+
+  .about-bg {
+    position: absolute;
+    height: 100px;
+    left: 0;
+    opacity: 0.6;
   }
 
   .about-block {
