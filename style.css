@@ -461,6 +461,14 @@ footer {
   height: auto;
   transition: all 350ms ease;
 }
+
+.footer-bg {
+  position: absolute;
+  height: 810px;
+  left: 0;
+  opacity: 0.4;
+}
+
 .content-wrapper-footer {
   width: 60%;
   display: flex;
@@ -493,11 +501,14 @@ footer {
   flex-direction: column;
   align-items: center;
   padding-bottom: 65px;
+  background-image: url("./assets/river.png");
+  background-size: cover;
+  background-position: right bottom;
 }
 
 .contact-style {
   margin-top: 65px;
-  background: #2db5da73;
+  background: #2db5dac4;
   display: flex;
   flex-direction: column;
   align-items: center;
