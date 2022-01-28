@@ -134,6 +134,15 @@ body {
   background: #698e2d42;
 }
 
+.hero::after {
+  content: "";
+  z-index: -1;
+  position: relative;
+  padding: 150px 263px 80px;
+  background-image: url("./assets/hero.png");
+  background-size: cover;
+}
+
 .hero-elements {
   margin-top: 60px;
   display: flex;
@@ -170,9 +179,10 @@ body {
   justify-content: flex-start;
   align-items: center;
   font-size: 3em;
+  border: solid 2px black;
 }
 
-.art img {
+.hero-img {
   height: 450px;
 }
 
