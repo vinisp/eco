@@ -591,6 +591,10 @@ textarea {
   .about-block {
     width: 90%;
   }
+
+  .footer-bg {
+    display: none;
+  }
 }
 
 /*TABLET - IPAD  */
