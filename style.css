@@ -574,10 +574,7 @@ textarea {
   }
 
   .about-bg {
-    position: absolute;
-    height: 100px;
-    left: 0;
-    opacity: 0.6;
+    display: none;
   }
 
   .about-block {
