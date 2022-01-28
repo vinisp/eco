@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&family=Outfit:wght@100;300;400;500&display=swap");
 
-* {
+*,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -134,13 +135,16 @@ body {
   background: #698e2d42;
 }
 
-.hero::after {
+.hero::before {
   content: "";
-  z-index: -1;
-  position: relative;
-  padding: 150px 263px 80px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 56.5%;
   background-image: url("./assets/hero.png");
-  background-size: cover;
+  opacity: 0.5;
+  transform: scaleX(-1);
 }
 
 .hero-elements {
@@ -314,6 +318,7 @@ body {
   font-size: 4rem;
   text-align: center;
   background: #2db5da3f;
+  background-image: url("./assets/hero.png");
 
   width: 100%;
   height: 100%;
