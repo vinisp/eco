@@ -135,6 +135,10 @@ body {
   background: #698e2d42;
 }
 
+.hero-bg {
+  height: 450px;
+}
+
 .hero::before {
   content: "";
   position: absolute;
@@ -143,6 +147,7 @@ body {
   width: 100%;
   height: 56.5%;
   background-image: url("./assets/hero.png");
+  background-repeat: no-repeat;
   opacity: 0.5;
   transform: scaleX(-1);
 }
@@ -299,6 +304,8 @@ body {
 }
 
 .callToAction-wrapper {
+  padding-top: 15px;
+  background: #2db5da3f;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -317,9 +324,9 @@ body {
   font-weight: 500;
   font-size: 4rem;
   text-align: center;
-  background: #2db5da3f;
-  background-image: url("./assets/hero.png");
 
+  background-image: url("./assets/hero.png");
+  background-repeat: no-repeat;
   width: 100%;
   height: 100%;
   display: flex;
@@ -393,6 +400,8 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1em;
+
+  background-size: contain;
 }
 
 .about-wrapper .title {
@@ -409,6 +418,21 @@ body {
   transition: opacity 6s ease;
 }
 
+.about-bg {
+  position: absolute;
+  height: 810px;
+  left: 0;
+  opacity: 0.6;
+}
+
+.about-bg:nth-child(2) {
+  height: 810px;
+  left: 75%;
+}
+
+.about-bg img {
+  height: 100%;
+}
 .about-resume {
   width: 100%;
   display: flex;
