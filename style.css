@@ -214,6 +214,7 @@ body {
   opacity: 0;
   height: 250px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -270,18 +271,8 @@ body {
 }
 
 .show {
-  flex: 0 0 0;
+  flex: 0 0 20%;
   animation: cardEnter 2500ms ease both;
-}
-
-.show:nth-child(3) {
-  flex: 0 0 0;
-  animation: cardEnter 5500ms ease both;
-}
-
-.show:nth-child(3) {
-  flex: 0 0 0;
-  animation: cardEnter 8500ms ease both;
 }
 
 .showAbout {
@@ -478,11 +469,12 @@ footer {
 .contact {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 50px;
   padding-bottom: 65px;
-  background-image: url("./assets/contactBg.JPG");
+  background: #f2f2f2;
   background-size: cover;
   background-position: right bottom;
 }
@@ -572,10 +564,6 @@ textarea {
   .about-block {
     width: 90%;
   }
-
-  .footer-bg {
-    display: none;
-  }
 }
 
 /*TABLET - IPAD  */
@@ -592,6 +580,7 @@ textarea {
 
   .hero-text .paragraph {
     width: 100%;
+    font-size: 2.5rem;
   }
 
   .HighLighted {
@@ -618,6 +607,10 @@ textarea {
     flex: 0 0 95%;
   }
 
+  .show {
+    flex: 0 0 95%;
+  }
+
   .about-resume {
     width: 100%;
     padding: 0 0.8em;
@@ -639,6 +632,14 @@ textarea {
     text-align: center;
   }
 
+  .contact {
+    padding-top: 35px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
   .contact-style {
     width: 95%;
   }
@@ -734,12 +735,9 @@ textarea {
 @keyframes cardEnter {
   0% {
     opacity: 0;
-
-    flex: 0 0 0;
   }
 
   100% {
-    flex: 0 0 20%;
     opacity: 1;
   }
 }
