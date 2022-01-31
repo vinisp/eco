@@ -133,24 +133,11 @@ body {
   padding: 80px;
   height: auto;
   background: #698e2d42;
+  background-image: url("./assets/montains.jpg");
 }
 
 .hero-bg {
   height: 450px;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  top: 251px;
-  right: 0;
-  width: 100%;
-  height: 150%;
-  background-image: url("./assets/hero.png");
-  background-repeat: no-repeat;
-  opacity: 0.3;
-  transform: scaleX(-1);
 }
 
 .hero-elements {
@@ -169,6 +156,7 @@ body {
   gap: 1em;
   height: 100%;
   width: 50%;
+  color: white;
 }
 
 .hero-text .title {
@@ -228,6 +216,10 @@ body {
   height: 100%;
 }
 
+.cards-wrapper:hover {
+  border: 0;
+}
+
 .card {
   border-radius: 14px;
 
@@ -240,6 +232,7 @@ body {
   align-items: center;
 
   background: rgba(255, 255, 255, 0.4);
+
   box-shadow: 10px 10px 20px -10px rgba(255, 255, 255, 0.2);
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -325,8 +318,6 @@ body {
   font-weight: 500;
   font-size: 4rem;
   text-align: center;
-
-  background-image: url("./assets/hero.png");
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
@@ -403,12 +394,13 @@ body {
   gap: 1em;
 
   background-size: contain;
+  padding-bottom: 75px;
 }
 
 .about-wrapper .title {
   font-size: 3rem;
   font-weight: 600;
-  color: rgb(114, 113, 113);
+  color: white;
 }
 
 .about {
@@ -417,22 +409,10 @@ body {
   display: flex;
   justify-content: center;
   transition: opacity 6s ease;
+  background-image: url("./assets/aboutBg.png");
+  background-size: cover;
 }
 
-.about-bg {
-  position: absolute;
-  height: 810px;
-  left: 0;
-  opacity: 0.6;
-}
-
-.about-bg:nth-child(2) {
-  left: 75%;
-}
-
-.about-bg img {
-  height: 100%;
-}
 .about-resume {
   width: 100%;
   display: flex;
@@ -445,15 +425,15 @@ body {
   transition: opacity 4s ease;
   align-self: center;
   text-align: justify;
-  background: #698e2d42;
+  background: #ced8bf;
   border-radius: 14px;
   box-shadow: 5px 9px 8px 2px rgba(0, 0, 0, 0.2);
+  color: black;
 }
 
 footer {
   border-top: solid 2px silver;
   border-bottom: solid 2px silver;
-  margin-top: 65px;
   padding: 45px 0;
   display: flex;
   flex-direction: column;
@@ -502,7 +482,7 @@ footer {
   flex-direction: column;
   align-items: center;
   padding-bottom: 65px;
-  background-image: url("./assets/river.png");
+  background-image: url("./assets/contactBg.JPG");
   background-size: cover;
   background-position: right bottom;
 }
