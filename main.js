@@ -9,7 +9,8 @@ const $hectar = document.querySelectorAll(".hectar");
 const $prospect = document.querySelectorAll(".prospect");
 const $municipality = document.querySelectorAll(".municipality");
 const $co2Number = document.querySelectorAll(".Co2Number");
-const speed = 600;
+const speed = 3500;
+const speed2 = 800;
 
 window.onscroll = function () {
   scrollFunction();
@@ -47,7 +48,7 @@ function isVisible(element) {
 
 function isVisible2(element) {
   let elementBox = element.getBoundingClientRect();
-  let distanceTop = -350;
+  let distanceTop = -250;
 
   if (elementBox.top - window.innerHeight < distanceTop) {
     return true;
@@ -58,7 +59,7 @@ function isVisible2(element) {
 
 function isVisible3(element) {
   let elementBox = element.getBoundingClientRect();
-  const distanceTop = -200;
+  const distanceTop = -370;
 
   if (elementBox.top - window.innerHeight < distanceTop) {
     return true;
@@ -78,7 +79,7 @@ function scanDocument() {
     section.classList.add("show");
   });
   $callToActionWrapper.forEach((section) => {
-    if (isVisible(section)) {
+    if (isVisible3(section)) {
       section.classList.add("leftEnter");
     }
   });
@@ -107,7 +108,7 @@ function scanDocument() {
             // Add inc to count and output in counter
             counter.innerText = count + inc;
             // Call function every ms
-            setTimeout(updateCount, 1);
+            setTimeout(updateCount, 10);
           } else {
             counter.innerText = target;
           }
@@ -119,7 +120,7 @@ function scanDocument() {
   });
 
   $prospect.forEach((section) => {
-    if (isVisible2(section)) {
+    if (isVisible(section)) {
       section.setAttribute("data-target", "849");
       $prospect.forEach((counter) => {
         const updateCount = () => {
@@ -127,7 +128,7 @@ function scanDocument() {
           const count = +counter.innerText;
 
           // Lower inc to slow and higher to slow
-          const inc = Math.floor(target / speed);
+          const inc = Math.floor(target / speed2);
 
           // console.log(inc);
           // console.log(count);
@@ -137,7 +138,7 @@ function scanDocument() {
             // Add inc to count and output in counter
             counter.innerText = count + inc;
             // Call function every ms
-            setTimeout(updateCount, 1);
+            setTimeout(updateCount, 50);
           } else {
             counter.innerText = target;
           }
@@ -149,7 +150,7 @@ function scanDocument() {
   });
 
   $municipality.forEach((section) => {
-    if (isVisible3(section)) {
+    if (isVisible(section)) {
       section.setAttribute("data-target", "29");
       $municipality.forEach((counter) => {
         const updateCount = () => {
@@ -164,9 +165,10 @@ function scanDocument() {
           // Check if target is reached
           if (count < target) {
             // Add inc to count and output in counter
+            console.log(count);
             counter.innerText = count + inc;
             // Call function every ms
-            setTimeout(updateCount, 200);
+            setTimeout(updateCount, 1300);
           } else {
             counter.innerText = target;
           }
@@ -178,13 +180,14 @@ function scanDocument() {
   });
 
   $co2Number.forEach((section) => {
-    if (isVisible3(section)) {
+    if (isVisible(section)) {
       section.setAttribute("data-target", "21");
 
       $co2Number.forEach((counter) => {
         const updateCount = () => {
           const target = +counter.getAttribute("data-target");
           const count = +counter.innerText;
+
           // Lower inc to slow and higher to slow
           const inc = 1;
           // Check if target is reached
@@ -192,7 +195,7 @@ function scanDocument() {
             // Add inc to count and output in counter
             counter.innerText = count + inc;
             // Call function every ms
-            setTimeout(updateCount, 250);
+            setTimeout(updateCount, 1300);
           } else {
             counter.innerText = target;
           }
