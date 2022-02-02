@@ -18,7 +18,7 @@ html {
 }
 
 :root {
-  --hover-color: #2db4da;
+  --hover-color: #cccccc;
 }
 
 body {
@@ -90,6 +90,23 @@ body {
   overflow-x: hidden;
 }
 
+.btn {
+  background: #1b8860;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 14px 26px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #21a374;
+}
+
 .hidden {
   opacity: 0;
 }
@@ -101,9 +118,9 @@ body {
   align-items: center;
   height: 80px;
   width: 100%;
-  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
   transition: all 350ms ease;
-  background: #f2f2f2b6;
+  background: transparent;
+  position: absolute;
 }
 
 .logo {
@@ -113,12 +130,13 @@ body {
 
 .navItems {
   display: flex;
+  align-items: center;
   gap: 2em;
 }
 
 .navItems li {
   text-transform: uppercase;
-  color: #1f503e;
+  color: white;
   cursor: pointer;
   font-family: "Outfit", sans-serif;
   transition: all 350ms ease;
@@ -132,7 +150,7 @@ body {
   padding: 80px;
   height: auto;
   background: #698e2d42;
-  background-image: url("./assets/montains.jpg");
+  background-image: url("./assets/cover.jpeg");
 }
 
 .hero-bg {
@@ -169,6 +187,13 @@ body {
   color: white;
   font-weight: 500;
   font-size: 2.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-text .paragraph .btn {
+  width: 30%;
 }
 
 .results-section {
@@ -289,11 +314,11 @@ body {
 
 .callToAction-wrapper {
   padding-top: 15px;
-  background: #2db5da3f;
+  background: #f2f2f2f2;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   height: 360px;
   transition: all 6s ease;
 }
@@ -307,18 +332,21 @@ body {
   font-family: "Outfit", sans-serif;
   font-weight: 500;
   font-size: 4rem;
+  color: #1f503e;
   text-align: center;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 70%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border: solid 2px #1f503e;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 .callToAction-text .title {
-  color: #2db5da;
   font-weight: 600;
 }
 
@@ -335,8 +363,7 @@ body {
   align-items: center;
   width: 350px;
   height: 80px;
-  border: solid 5px #2db5da;
-  background: #2db5dac2;
+  background: #1f503ec2;
   color: white;
   border-radius: 14px;
   box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.2);
@@ -344,9 +371,9 @@ body {
 }
 
 .btn-callToAction:hover {
-  border: solid 5px #2db5dac2;
+  border: solid 2px white;
   background: white;
-  color: #2db5da;
+  color: #1f503e;
   height: 70px;
   width: 300px;
   transform: translateY(10px);
@@ -390,7 +417,7 @@ body {
 .about-wrapper .title {
   font-size: 3rem;
   font-weight: 600;
-  color: white;
+  color: #1f503e;
 }
 
 .about {
@@ -399,8 +426,18 @@ body {
   display: flex;
   justify-content: center;
   transition: opacity 6s ease;
-  background-image: url("./assets/aboutBg.png");
-  background-size: cover;
+}
+
+.about-img {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.about-img img {
+  width: 45%;
+  height: 400px;
 }
 
 .about-resume {
@@ -410,7 +447,7 @@ body {
 }
 
 .about-block {
-  width: 50%;
+  width: 70%;
   padding: 120px 60px;
   transition: opacity 4s ease;
   align-self: center;
@@ -481,15 +518,57 @@ footer {
 
 .contact-style {
   margin-top: 65px;
-  background: #2db5dac4;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 35px 25px;
   border-radius: 14px;
-  box-shadow: 0 7px 7px 2px rgba(0, 0, 0, 0.2);
-  height: 600px;
   transition: opacity 6s ease;
+}
+
+.contact-style h2 {
+  color: #1b8860;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 23px;
+  text-align: center;
+}
+
+.contact-style p {
+  font-size: 16px;
+  color: #444;
+  font-weight: normal;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 5px;
+}
+
+.contact-text p {
+  text-align: center;
+}
+
+.input-contact {
+  border: solid 1px #cccccc;
+  width: 100%;
+  height: 54px;
+  padding: 10px;
+}
+
+.btnContatc {
+  margin-top: 12px;
+  border: 0;
+  width: 80%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 #usrform {
@@ -564,6 +643,22 @@ textarea {
   .about-block {
     width: 90%;
   }
+
+  .hero-text .paragraph .btn {
+    width: 60%;
+  }
+
+  .callToAction-text {
+    width: 95%;
+  }
+
+  .about-img img {
+    width: 95%;
+  }
+
+  .about-img {
+    flex-wrap: wrap;
+  }
 }
 
 /*TABLET - IPAD  */
@@ -581,6 +676,10 @@ textarea {
   .hero-text .paragraph {
     width: 100%;
     font-size: 2.5rem;
+  }
+
+  .hero-text .paragraph .btn {
+    width: 60%;
   }
 
   .HighLighted {
@@ -614,6 +713,11 @@ textarea {
   .about-resume {
     width: 100%;
     padding: 0 0.8em;
+  }
+
+  .about-img img {
+    width: 95%;
+    height: 200px;
   }
 
   .card-number {
