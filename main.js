@@ -79,7 +79,7 @@ function scanDocument() {
     section.classList.add("show");
   });
   $callToActionWrapper.forEach((section) => {
-    if (isVisible3(section)) {
+    if (isVisible(section)) {
       section.classList.add("leftEnter");
     }
   });

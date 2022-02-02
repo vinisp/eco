@@ -201,7 +201,7 @@ body {
 
   background: #f2f2f2;
   background-blend-mode: exclusion;
-  transition: opacity 6s ease;
+  transition: opacity 1s ease;
   height: auto;
 }
 
@@ -251,7 +251,7 @@ body {
   border-right: 1px solid rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
-  transition: all 0.5s ease;
+  transition: all 0.1s ease;
 }
 
 .card div {
@@ -297,7 +297,7 @@ body {
 
 .show {
   flex: 0 0 20%;
-  animation: cardEnter 2500ms ease both;
+  animation: cardEnter 1500ms ease both;
 }
 
 .showAbout {
@@ -320,11 +320,11 @@ body {
   justify-content: center;
   align-items: center;
   height: 360px;
-  transition: all 6s ease;
+  transition: all 2s ease;
 }
 
 .leftEnter {
-  animation: leftEnter 2.6s ease-out both;
+  animation: leftEnter 600ms ease-out both;
 }
 
 .callToAction-text {
@@ -849,7 +849,7 @@ textarea {
 
 @keyframes leftEnter {
   0% {
-    transform: translateX(-3500px);
+    transform: translateX(-1500px);
     width: 0;
   }
   100% {
